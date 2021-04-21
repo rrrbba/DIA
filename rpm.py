@@ -1,8 +1,9 @@
 import math 
 import pandas as pd # enables to work with tables easily
 
-n1 = 89
-n2 = 18
+# faster if larger number is the doubling and smaller is halving 
+n1 = 18
+n2 = 89
 
 halving = [n1]
 doubling = [n2]
