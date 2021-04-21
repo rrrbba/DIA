@@ -18,4 +18,8 @@ half_double = pd.DataFrame(zip(halving, doubling))
 
 # keep only the rows of the table whose entry in the halving column is odd
 half_double = half_double.loc[half_double[0]%2 == 1, :]
-# loc selects only the rows you want
+# loc selects only the rows you want - in this case all rows where halving is odd, the colon means we want all the columns
+
+answer = sum(half_double.loc[:,1])
+
+print(answer)
