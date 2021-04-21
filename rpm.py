@@ -1,5 +1,5 @@
 import math 
-import pandas as pd
+import pandas as pd # enables to work with tables easily
 
 n1 = 89
 n2 = 18
@@ -12,3 +12,10 @@ while(min(halving) > 1):
 
 while(len(doubling) < len(halving)):
     doubling.append(max(doubling) * 2)
+
+half_double = pd.DataFrame(zip(halving, doubling))
+# zip joins halving and doubling together
+
+# keep only the rows of the table whose entry in the halving column is odd
+half_double = half_double.loc[half_double[0]%2 == 1, :]
+# loc selects only the rows you want
