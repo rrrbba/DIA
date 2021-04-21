@@ -43,4 +43,12 @@ def rule1(x,n,upright):
 8   1   6
 """
 
+# Rule 2 is by default finding the entry below and to the right of x, so it'll find up and to the left when doing the reverse
+def rule2(x,n,upleft):
+    return((x + ((-1)**upleft))%n**2)
+
+# For exceptions to rule 2 (only followed when crossing the magic square's antidiagonal)
+def rule3(x,n,upleft):
+    return((x + ((-1)**upleft * (-n+1)))%n**2)
+
 
